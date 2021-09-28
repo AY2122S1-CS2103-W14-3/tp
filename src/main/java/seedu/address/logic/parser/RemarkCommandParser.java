@@ -10,6 +10,10 @@ import seedu.address.logic.commands.RemarkCommand;
 import seedu.address.logic.parser.exceptions.ParseException;
 import seedu.address.model.person.Remark;
 
+//@@marcusc55-reused
+//AB3 Tutorial: Add remark command.
+//https://nus-cs2103-ay2122s1.github.io/tp/tutorials/AddRemark.html
+
 /**
  * Parses input arguments and creates a new {@code RemarkCommand} object
  */

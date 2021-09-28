@@ -13,6 +13,10 @@ import seedu.address.model.Model;
 import seedu.address.model.person.Person;
 import seedu.address.model.person.Remark;
 
+//@@marcusc55-reused
+//AB3 Tutorial: Add remark command.
+//https://nus-cs2103-ay2122s1.github.io/tp/tutorials/AddRemark.html
+
 /**
  * Changes the remark of an existing person in the address book.
  */

@@ -91,6 +91,9 @@ public class AddressBookParserTest {
         assertTrue(parser.parseCommand(ListCommand.COMMAND_WORD + " 3") instanceof ListCommand);
     }
 
+    //@@marcusc55-reused
+    //AB3 Tutorial: Add remark command.
+    //https://nus-cs2103-ay2122s1.github.io/tp/tutorials/AddRemark.html
     @Test
     public void parseCommand_remark() throws Exception {
         final Remark remark = new Remark("Some remark.");

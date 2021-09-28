@@ -12,6 +12,10 @@ import seedu.address.commons.core.index.Index;
 import seedu.address.logic.commands.RemarkCommand;
 import seedu.address.model.person.Remark;
 
+//@@marcusc55-reused
+//AB3 Tutorial: Add remark command.
+//https://nus-cs2103-ay2122s1.github.io/tp/tutorials/AddRemark.html
+
 public class RemarkCommandParserTest {
     private RemarkCommandParser parser = new RemarkCommandParser();
     private final String nonEmptyRemark = "Some remark.";

@@ -2,6 +2,10 @@ package seedu.address.model.person;
 
 import static java.util.Objects.requireNonNull;
 
+//@@marcusc55-reused
+//AB3 Tutorial: Add remark command.
+//https://nus-cs2103-ay2122s1.github.io/tp/tutorials/AddRemark.html
+
 /**
  * Represents a Person's remark in the address book.
  * Guarantees: immutable; is always valid

@@ -5,6 +5,9 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import org.junit.jupiter.api.Test;
 
+//@@marcusc55-reused
+//AB3 Tutorial: Add remark command.
+//https://nus-cs2103-ay2122s1.github.io/tp/tutorials/AddRemark.html
 public class RemarkTest {
 
     @Test
