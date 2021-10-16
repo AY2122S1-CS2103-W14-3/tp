@@ -38,7 +38,7 @@ public class CommandTestUtil {
     public static final String VALID_INFO_AMY = "Has trouble understanding database principles";
     public static final String VALID_INFO_BOB = "Has trouble understanding software engineering principles";
     public static final String VALID_MODULE_AMY = "CS2103";
-    public static final String VALID_MODULE_BOB = "CS2103";
+    public static final String VALID_MODULE_BOB = "cS2103";
     public static final String VALID_GROUP_AMY = "T03";
     public static final String VALID_GROUP_BOB = "T03";
     public static final String VALID_TAG_HUSBAND = "husband";

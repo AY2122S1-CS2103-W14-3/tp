@@ -18,6 +18,7 @@ import seedu.edrecord.model.group.ReadOnlyGroupSystem;
 public class Module {
 
     public static final String MESSAGE_CONSTRAINTS = "Module code cannot have whitespaces.";
+    public static final String MESSAGE_INVALID_JSON = "Module code cannot be saved with lower case or white spaces.";
     public static final String MESSAGE_DOES_NOT_EXIST = "Module with that code has yet to be created.";
     public static final String MESSAGE_DUPLICATE = "Module with that code has already been created.";
 
@@ -66,7 +67,7 @@ public class Module {
      */
     public Module(String code) {
         requireNonNull(code);
-        this.code = code;
+        this.code = code.toUpperCase();
         this.groupSystem = new GroupSystem();
         this.assignmentList = new UniqueAssignmentList();
     }
@@ -94,6 +95,13 @@ public class Module {
     }
 
     /**
+     * Returns true if a given string is a valid parsed module code.
+     */
+    public static boolean isValidSavedModuleCode(String test) {
+        return isValidModuleCode(test) && test.equals(test.toUpperCase().trim());
+    }
+
+    /**
      * Returns true if the module given has the same module code.
      */
     public boolean isSameModule(Module otherModule) {
@@ -103,7 +111,7 @@ public class Module {
         if (otherModule == null) {
             return false;
         }
-        return code.equals(otherModule.getCode());
+        return code.equalsIgnoreCase(otherModule.getCode());
     }
 
     public void setGroupSystem(ReadOnlyGroupSystem groupSystem) {
@@ -159,7 +167,7 @@ public class Module {
             return false;
         }
         Module otherModule = (Module) other;
-        return code.equalsIgnoreCase(otherModule.code)
+        return code.equals(otherModule.code)
                 && groupSystem.equals(((Module) other).groupSystem)
                 && assignmentList.equals(otherModule.assignmentList);
     }

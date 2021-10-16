@@ -49,7 +49,7 @@ public class ModuleTest {
         assertFalse(CS2103.equals(new Module("CS2103", getTypicalGroupSystem())));
 
         // same values -> returns true
-        Module equalModule = new ModuleBuilder("CS2103")
+        Module equalModule = new ModuleBuilder("cs2103")
                 .withAssignment(IP).withAssignment(TP)
                 .withGroup(T03).withGroup(T07).build();
         assertTrue(CS2103.equals(equalModule));

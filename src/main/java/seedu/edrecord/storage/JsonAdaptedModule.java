@@ -55,6 +55,9 @@ class JsonAdaptedModule {
         if (!Module.isValidModuleCode(code)) {
             throw new IllegalValueException(Module.MESSAGE_CONSTRAINTS);
         }
+        if (!Module.isValidSavedModuleCode(code)) {
+            throw new IllegalValueException(Module.MESSAGE_INVALID_JSON);
+        }
         Module module = new Module(code);
         for (JsonAdaptedAssignment jsonAdaptedAssignment : assignments) {
             Assignment asg = jsonAdaptedAssignment.toModelType();

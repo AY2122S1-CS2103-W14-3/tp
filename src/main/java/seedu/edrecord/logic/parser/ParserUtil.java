@@ -128,17 +128,20 @@ public class ParserUtil {
     }
 
     /**
-     * Parses a {@code String moduleCode} into a {@code Module}.
+     * Parses a {@code String moduleCode} and return the module system's {@code Module}.
      * Leading and trailing whitespaces will be trimmed.
      *
      * @throws ParseException if the given {@code moduleCode} is invalid.
      */
     public static Module parseModule(String moduleCode) throws ParseException {
         requireNonNull(moduleCode);
-        String trimmedModuleCode = moduleCode.trim();
-
+        String trimmedModuleCode = moduleCode.trim().toUpperCase();
         if (!Module.isValidModuleCode(trimmedModuleCode)) {
             throw new ParseException(Module.MESSAGE_CONSTRAINTS);
+        }
+
+        if (!Module.MODULE_SYSTEM.hasModule(trimmedModuleCode)) {
+            throw new ParseException(Module.MESSAGE_DOES_NOT_EXIST);
         }
 
         return new Module(trimmedModuleCode);
