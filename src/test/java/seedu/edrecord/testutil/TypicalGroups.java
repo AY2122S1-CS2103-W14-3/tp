@@ -14,6 +14,8 @@ public class TypicalGroups {
 
     public static final Group T03 = new Group("T03");
     public static final Group T07 = new Group("T07");
+    public static final Group T10 = new Group("T10");
+    public static final Group T12 = new Group("T12");
 
     private TypicalGroups() {} // prevents instantiation
 

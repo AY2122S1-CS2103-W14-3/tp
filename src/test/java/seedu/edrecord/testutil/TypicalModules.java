@@ -17,6 +17,7 @@ public class TypicalModules {
     public static final Module CS2103 = new Module("CS2103", getTypicalGroupSystem());
     public static final Module CS2103T = new Module("CS2103T", getTypicalGroupSystem());
     public static final Module CS3230 = new Module("CS3230", getTypicalGroupSystem());
+    public static final Module CS1111 = new Module("CS1111");
 
     private TypicalModules() {} // prevents instantiation
 

@@ -109,8 +109,7 @@ public class ModuleSystem implements ReadOnlyModuleSystem {
 
     @Override
     public String toString() {
-        return modules.asUnmodifiableObservableList().size() + " modules";
-        // TODO: refine later
+        return modules.toString();
     }
 
     @Override

@@ -34,6 +34,7 @@ public class AppParameters {
         Map<String, String> namedParameters = parameters.getNamed();
 
         String configPathParameter = namedParameters.get("config");
+        System.out.println(String.format("%s %s", configPathParameter, FileUtil.isValidPath(configPathParameter)));
         if (configPathParameter != null && !FileUtil.isValidPath(configPathParameter)) {
             logger.warning("Invalid config path " + configPathParameter + ". Using default config path.");
             configPathParameter = null;

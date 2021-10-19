@@ -100,8 +100,7 @@ public class GroupSystem implements ReadOnlyGroupSystem {
 
     @Override
     public String toString() {
-        return groups.asUnmodifiableObservableList().size() + " classes";
-        // TODO: refine later
+        return groups.toString();
     }
 
     @Override

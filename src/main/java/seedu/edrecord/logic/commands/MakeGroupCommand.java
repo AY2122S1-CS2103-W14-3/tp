@@ -37,6 +37,7 @@ public class MakeGroupCommand extends Command {
      */
     public MakeGroupCommand(Group group, Module mod) {
         requireAllNonNull(group);
+        requireAllNonNull(mod);
 
         this.group = group;
         this.module = mod;

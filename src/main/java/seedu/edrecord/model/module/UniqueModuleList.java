@@ -3,6 +3,7 @@ package seedu.edrecord.model.module;
 import static java.util.Objects.requireNonNull;
 import static seedu.edrecord.commons.util.CollectionUtil.requireAllNonNull;
 
+import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
@@ -136,5 +137,14 @@ public class UniqueModuleList implements Iterable<Module> {
             }
         }
         return true;
+    }
+
+    @Override
+    public String toString() {
+        List<Module> modules = new ArrayList<>();
+        for (Module module : internalList) {
+            modules.add(module);
+        }
+        return modules.toString();
     }
 }
