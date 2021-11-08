@@ -70,7 +70,7 @@ public class ModuleSet {
         for (Module module : this.getModules()) {
             if (module.getCode().equals(mod.getCode()) && module.hasGroup(grp)) {
                 module.deleteGroup(grp);
-                if (module.getGroupSystem().isEmpty()) {
+                if (!module.hasAnyGroup()) {
                     removeMod(module);
                 }
                 return;

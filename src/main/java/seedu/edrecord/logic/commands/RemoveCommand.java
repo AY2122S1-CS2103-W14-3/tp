@@ -85,9 +85,6 @@ public class RemoveCommand extends Command {
         }
 
         moduleSet.removeGroup(savedMod, group);
-        if (moduleSet.hasAnyGroup(savedMod)) {
-            moduleSet.removeMod(savedMod);
-        }
 
         model.setSearchFilter(PREDICATE_SHOW_ALL_PERSONS);
         return new CommandResult(String.format(MESSAGE_MOVE_PERSON_SUCCESS, personToMove.getName(), savedMod, group));
